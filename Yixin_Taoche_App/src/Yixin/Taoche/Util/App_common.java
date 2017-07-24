@@ -205,7 +205,7 @@ public class App_common {
 	}
 	
 	// 启动闪屏页滑动操作
-	public void Splash_screen(){
+	public void Splash_screen(AppiumDriver driver){
 		int width = driver.manage().window().getSize().getWidth();
 		int height = driver.manage().window().getSize().getHeight();
 
