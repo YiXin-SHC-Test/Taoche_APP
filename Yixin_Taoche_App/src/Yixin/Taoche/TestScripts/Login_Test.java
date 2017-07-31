@@ -16,6 +16,7 @@ public class Login_Test extends App_BaseCase {
 	public static Logger logger = Logger.getLogger(Startup_Test.class);
 
 	@Test
+	// 账号密码登录
 	public void Login() throws Exception {
 		Log.startTestCase("启动APP");
 		Log.startTestCase("进入APP首页");
@@ -30,7 +31,9 @@ public class Login_Test extends App_BaseCase {
 			// 通过账号密码登录
 			loginPage.Zhanghao_login().click();
 			WaitUtil.sleep(1000);
+			loginPage.password_tel().clear();
 			loginPage.password_tel().sendKeys(Constant.UserName);
+			loginPage.new_password().clear();
 			loginPage.new_password().sendKeys(Constant.Password);
 			loginPage.loginbtn().click();
 			WaitUtil.sleep(1000);

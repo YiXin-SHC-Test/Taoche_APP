@@ -2,8 +2,6 @@ package Yixin.Taoche.Modules;
 
 import java.io.File;
 import java.net.URL;
-import java.util.NoSuchElementException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -50,6 +48,7 @@ public class App_BaseCase {
 		// capabilities.setCapability("restKeyboard", "True");
 		// 安装时不对apk进行重签名，设置很有必要，否则有的apk在重签名后无法正常使用
 		// capabilities.setCapability("noSign", "True");
+		//capabilities.setCapability("sessionOverride", true);
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
 				capabilities);
 		Thread.sleep(5000);
